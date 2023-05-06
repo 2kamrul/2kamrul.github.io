@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7f470074.css",
+    "main.js": "/static/js/main.ccd32e2e.js",
+    "static/media/beximco-portal.png": "/static/media/beximco-portal.a016d22470a39c9a3ea7.png",
+    "static/media/beximco-dashboard.png": "/static/media/beximco-dashboard.796d18eb0ede6f220302.png",
+    "static/media/typeorm.svg": "/static/media/typeorm.acf7dabb239efb30294c5db82a175a6b.svg",
+    "static/media/android-beximco-board.png": "/static/media/android-beximco-board.8fccbe0f10f658cfcb56.png",
+    "static/media/pasha-tourism.png": "/static/media/pasha-tourism.6e69fc3bf654630d0fac.png",
+    "static/media/android-beximco-now.png": "/static/media/android-beximco-now.61b10c1b92d6de7bdac9.png",
+    "static/media/easy-shop-bd.png": "/static/media/easy-shop-bd.73a8b44720ba94c055a9.png",
+    "static/media/bookshelf-365.png": "/static/media/bookshelf-365.e8893668564d97709d3b.png",
+    "static/media/android-beximco-vms.png": "/static/media/android-beximco-vms.a11094b9a931e048ef02.png",
+    "static/media/million-holdings.png": "/static/media/million-holdings.30b85e1b0be2b3867534.png",
+    "index.html": "/index.html",
+    "main.7f470074.css.map": "/static/css/main.7f470074.css.map",
+    "main.ccd32e2e.js.map": "/static/js/main.ccd32e2e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f470074.css",
+    "static/js/main.ccd32e2e.js"
+  ]
+}
