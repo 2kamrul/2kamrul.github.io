@@ -1,0 +1,74 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true
+    },
+    "extends": [
+        "react-app",
+        "react-app/jest",
+        // "plugin:react/recommended",
+        // "plugin:react-hooks/recommended",
+        // "eslint:recommended",
+        // "plugin:jsx-a11y/recommended",
+        "airbnb",
+        "plugin:prettier/recommended",
+        "plugin:tailwindcss/recommended",
+        "plugin:json/recommended"
+    ],
+    "overrides": [
+        {
+            "files": ["src/**/*.{js,jsx,ts,tsx,json}"]
+        }
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "eslint-plugin-import",
+        "tailwindcss",
+        "prettier" // Always bottom of all plugins
+    ],
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "paths": ["src"] // Like jsconfig
+            }
+        }
+    },
+    "rules": {
+        // Single quote
+        "quotes": [
+            "error",
+            "double",
+            {
+                "avoidEscape": true
+            }
+        ],
+        // Json format
+        "json/*": [
+            "error",
+            {
+                "allowComments": true
+            }
+        ],
+        "linebreak-style": ["error", "windows"], // LF (unix) and CRLF (windows)
+        "import/no-extraneous-dependencies": ["off"], // If it's on then we can't import module from devDependency.
+        "no-unused-vars": ["warn"], // Un-used variables
+        "react/jsx-uses-react": ["off"],
+        "react/react-in-jsx-scope": ["off"], // Import react in every file
+        "react/jsx-props-no-spreading": ["warn"], // For props spreading <Comp {...item}/>
+        "no-shadow": "off",
+        "import/prefer-default-export": "off", // Default export from any component
+        "no-unreachable": "warn", // Code below return statement
+        // Tailwind
+        "tailwindcss/classnames-order": "warn",
+        "tailwindcss/no-custom-classname": "warn",
+        "tailwindcss/no-contradicting-classname": "error"
+    }
+}

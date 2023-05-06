@@ -1,0 +1,67 @@
+@import "css/loading.css";
+@import "css/drawer.css";
+@import "css/components.css";
+@import "css/icon-button.css";
+@import "css/project.css";
+@import "css/home.css";
+
+/* Font Raleway */
+/* @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+
+/* Font Great Vibes (Only for logo) */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font for full website */
+@layer base {
+    html {
+        font-family: "Lato", sans-serif;
+        color: white;
+    }
+}
+
+@layer utilities {
+    ::selection {
+        background: theme("colors.secondary-main");
+    }
+
+    p {
+        @apply text-sm sm:text-base lg:text-lg;
+    }
+
+    /* Same as p just list-disc */
+    li {
+        @apply list-disc text-sm sm:text-base lg:text-lg;
+    }
+
+    h2 {
+        @apply text-4xl font-bold sm:text-5xl lg:text-6xl;
+    }
+
+    h3 {
+        @apply text-2xl font-bold sm:text-3xl lg:text-4xl;
+    }
+
+    h4 {
+        @apply text-lg font-semibold sm:text-2xl lg:text-3xl;
+    }
+
+    h5 {
+        @apply text-lg font-semibold md:text-xl lg:text-2xl;
+    }
+
+    .ct-section {
+        @apply mb-5 bg-primary-main p-5;
+    }
+
+    .ct-section-without-margin {
+        @apply bg-primary-main p-5;
+    }
+
+    .animation-pause {
+        animation-play-state: paused;
+    }
+}

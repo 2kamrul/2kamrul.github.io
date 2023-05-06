@@ -1,0 +1,83 @@
+.cubespinner {
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    transform-style: preserve-3d;
+    transform-origin: 60px 60px 0;
+}
+
+.cubespinner div {
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    border: 1px solid theme("colors.primary-main");
+    background-color: theme("colors.primary-dark");
+    opacity: 0.95;
+    text-align: center;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 30px 0px theme("colors.primary-main");
+}
+
+/* Another Design Just Comment Out This and comment Previous Design */
+/* .cubespinner div {
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background-color: theme("colors.primary-dark");
+    text-align: center;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
+
+.cubespinner div p {
+    color: theme("colors.gray.300");
+}
+
+.cubespinner .face1 {
+    transform: translateZ(60px);
+}
+.cubespinner .face2 {
+    transform: rotateY(90deg) rotateZ(-90deg) translateZ(60px);
+}
+.cubespinner .face3 {
+    transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+}
+.cubespinner .face4 {
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+}
+.cubespinner .face5 {
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+}
+.cubespinner .face6 {
+    transform: rotateX(-90deg) translateZ(60px);
+}
+
+@keyframes spincube {
+    from,
+    to {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16% {
+        transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    33% {
+        transform: rotateY(-90deg) rotateX(90deg);
+    }
+    50% {
+        transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66% {
+        transform: rotateY(-270deg) rotateX(90deg);
+    }
+    83% {
+        transform: rotateX(90deg);
+    }
+}

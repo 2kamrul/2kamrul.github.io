@@ -1,0 +1,98 @@
+/* -----------------Drawer And Main Container -----------------*/
+
+/* Open drawer and change values */
+.cs-drawer-open {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 25px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out 0s, box-shadow 0.25s;
+}
+
+.cs-drawer-close {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 25px;
+    transform: translateX(0%);
+    transition: transform 0.3s ease-in-out 0s, box-shadow 0.25s 0s;
+}
+
+.cs-main-container-push {
+    transform: translate(-23px, 3%) rotateY(-14deg) scale(0.85, 0.94);
+    transition: transform 0.3s ease-in-out 0s;
+}
+
+.cs-main-container-push:hover {
+    cursor: pointer;
+    transform: translate(-23px, 3%) rotateY(-11deg) scale(0.85, 0.94);
+}
+
+/* Main Container */
+.cs-main {
+    transition: transform 0.3s ease 0s;
+    perspective: 800px;
+    transform: translateZ(0px);
+}
+
+.cs-main-container {
+    transform-origin: 100% 0px 0px;
+    transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
+}
+
+/* Scrollbar */
+.cs-main-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.cs-main-container::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.cs-main-container::-webkit-scrollbar-thumb {
+    /* background-color: rgb(180, 83, 9, .9); */
+    background-color: theme("colors.primary-light");
+}
+
+/* -----------------Drawer Item -----------------*/
+/* DrawerItem Position */
+.cs-drawer-item {
+    position: relative;
+}
+
+/* DrawerItem Bottom Border */
+.cs-drawer-item-bottom-border {
+    background-color: white;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/* DrawerItemOverlay init position */
+.cs-drawer-item-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    transition: 0.3s ease;
+    z-index: 2;
+}
+
+/* DrawerItemOverlay init position bottom border */
+.cs-drawer-item-overlay::after {
+    content: "";
+    background: theme("colors.secondary-main");
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+}
+
+/* DrawerItemOverlay position after DrawerItem hover  */
+.cs-drawer-item:hover .cs-drawer-item-overlay {
+    width: 100%;
+}

@@ -1,0 +1,11 @@
+.cs-tooltip-arrow::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  bottom: -6px;
+  right: 15px;
+  transform: rotate(30deg);
+  z-index: -1;
+}
