@@ -94,7 +94,7 @@ function Layout() {
                         key={id}
                         to={path}
                         onMouseDown={() => setDrawerOpen(false)}
-                        className="cs-drawer-item group flex-1"
+                        className="cs-drawer-item group z-10 flex-1"
                         variants={variants}
                     >
                         <div

@@ -24,6 +24,11 @@ function Home() {
                     experience.
                 </p>
 
+                <p className="pb-1 text-secondary-light md:pb-2 lg:pb-3">
+                    If you are visiting the site from any freelancing sites, please use their channels to
+                    contact me.
+                </p>
+
                 <div className="mt-3 inline-grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
                     <IconButtonNavigation
                         title="My Portfolio"

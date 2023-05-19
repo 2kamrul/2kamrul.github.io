@@ -12,13 +12,9 @@ function App() {
         // <Routes maxLoadingTime={500} loadingScreen={Loading}>
         <Routes loadingScreen={Loading}>
             <Route element={<LoadingInterceptor />}>
-                {/* Without footer */}
                 <Route element={<Layout />}>
                     <Route index element={<Home />} loading />
                     <Route path="/contact" element={<Contact />} loading />
-                </Route>
-                {/* With footer */}
-                <Route element={<Layout />}>
                     <Route path="/about" element={<About />} loading />
                     <Route path="/portfolio" element={<Portfolio />} loading />
                 </Route>
